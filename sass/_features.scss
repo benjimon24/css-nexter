@@ -21,7 +21,7 @@
     height: 4.5rem;
     width: 4.5rem;
     // grid-row: 1 / -1; // -1 is the end of the explicit grid
-    grid-row: 1 / span 2; // -1 is the end of the explicit grid
+    grid-row: 1 / span 2;
     transform: translateY(-1rem);
   }
   &__text {
