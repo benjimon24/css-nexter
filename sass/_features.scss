@@ -1,10 +1,30 @@
 .features {
   display: grid;
   grid-column: center-start / center-end;
-  grid-template-columns: repeat(3, 1fr);
+  // grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 6rem;
-  
+  align-items: start;
+
   margin: 15rem 0;
-  // .feature {
-  // }
+}
+
+// Would be completely reusable on other parts of the page
+.feature {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-row-gap: 1.5rem;
+  grid-column-gap: 2.5rem;
+
+  &__icon {
+    fill: $color-primary;
+    height: 4.5rem;
+    width: 4.5rem;
+    // grid-row: 1 / -1; // -1 is the end of the explicit grid
+    grid-row: 1 / span 2; // -1 is the end of the explicit grid
+    transform: translateY(-1rem);
+  }
+  &__text {
+    font-size: 1.7rem;
+  }
 }
