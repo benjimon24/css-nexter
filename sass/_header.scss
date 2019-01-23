@@ -11,8 +11,15 @@
   grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
   grid-template-columns: minmax(min-content, max-content);
   grid-row-gap: 1.5rem;
-
   justify-content: center;
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: full-start / full-end;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 5rem;
+  }
 
   &__logo {
     height: 3rem;
@@ -32,7 +39,8 @@
     grid-column-gap: 1.5rem;
     align-items: center;
 
-    &::before, &::after {
+    &::before,
+    &::after {
       display: block;
       content: "";
       height: 1px;

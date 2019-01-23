@@ -7,6 +7,10 @@
   align-items: start;
 
   margin: 15rem 0;
+
+  @media only screen and (max-width: $bp-medium) {
+    margin: 8rem 0;
+  }
 }
 
 // Would be completely reusable on other parts of the page
